@@ -1,0 +1,37 @@
+<!-- DOCTYPE HTML -->
+<html>
+
+<head>
+    <title>Your First React Project</title>
+    <meta charset="utf-8" />
+
+    <script src="https://unpkg.com/react@latest/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+    <style>
+        #container {
+            padding: 50px;
+            background-color: #eeeeee
+        }
+
+        #container h1 {
+            font-family: sans-serif;
+            font-size: 48px;
+            color: #0080A8;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <script type="text/babel">
+        ReactDOM.render(
+        <h1>Hello, React!</h1>, document.querySelector('#container') )
+    </script>
+
+
+</body>
+
+</html>
