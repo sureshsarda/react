@@ -14,36 +14,58 @@
 <body>
     <div id="container"></div>
     <script type="text/babel">
-
-        var Letter = React.createClass({ 
+        var Label = React.createClass({ 
             render: function () {
                 var styleSheet = {
-                    padding: "10px",
-                    margin: "10px",
-                    backgroundColor: this.props.bgcolor,
-                    color: "#333",
-                    display: "inline-block",
-                    fontFamily: "monospace",
-                    fontSize: "32px",
-                    textAlign: "center"
-
+                    fontFamily: "sans-serif",
+                    fontWeight: "bold",
+                    padding: "15px",
+                    margin: 0
                 }
                 return (
                     <div style={styleSheet}>
-                        <p>{this.props.children}</p>
+                        {this.props.color}
                     </div>
                 ) 
+            } 
+        }); 
+
+        var Square = React.createClass({ 
+            render: function () {
+                var styleSheet = {
+                    height: "150px",
+                    backgroundColor: this.props.color
+                }
+                return (
+                    <div style={styleSheet}>
+                    </div>
+                ) 
+            } 
+        }); 
+
+        var Card = React.createClass({ 
+            render: function () {
+                var styleSheet = {
+                    height: "200px",
+                    width: "150px",
+                    padding: 0,
+                    backgroundColor: "#FFF",
+                    WebkitFilter: "drop-shadow(0px 0px 5px #666)",  
+                    filter: "drop-shadow(0px 0px 5px #666)"
+                };
+
+                return (
+                    <div style={styleSheet}>
+                        <Square color={this.props.color}/>
+                        <Label  color={this.props.color}/>
+                    </div>
+                ); 
             } 
         }); 
         
         ReactDOM.render(
         <div>
-            <Letter bgcolor="#58B3FF">A</Letter>
-            <Letter bgcolor="#FF605F">E</Letter>
-            <Letter bgcolor="#FFD52E">I</Letter>
-            <Letter bgcolor="#49DD83">O</Letter>
-            <Letter bgcolor="#AE99FF">U</Letter>
-            
+            <Card color="#FFA737"/>
         </div>, document.querySelector('#container') )
     </script>
 
