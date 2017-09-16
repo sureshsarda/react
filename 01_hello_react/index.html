@@ -9,37 +9,42 @@
     <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
 
-    <style>
-        #container {
-            padding: 50px;
-            background-color: #eeeeee
-        }
-
-        #container h1 {
-            font-family: sans-serif;
-            font-size: 48px;
-            color: #0080A8;
-
-        }
-    </style>
 </head>
 
 <body>
     <div id="container"></div>
     <script type="text/babel">
 
-        var HelloWorldComponent = React.createClass({
-            render: function() {
+        var Letter = React.createClass({ 
+            render: function () {
+                var styleSheet = {
+                    padding: "10px",
+                    margin: "10px",
+                    backgroundColor: this.props.bgcolor,
+                    color: "#333",
+                    display: "inline-block",
+                    fontFamily: "monospace",
+                    fontSize: "32px",
+                    textAlign: "center"
+
+                }
                 return (
-                    <p>Hello, {this.props.person}!</p>
-                );
-            }
-        });
+                    <div style={styleSheet}>
+                        <p>{this.props.children}</p>
+                    </div>
+                ) 
+            } 
+        }); 
+        
         ReactDOM.render(
         <div>
-            <HelloWorldComponent person="Suresh"/>
-        </div>, 
-        document.querySelector('#container') )
+            <Letter bgcolor="#58B3FF">A</Letter>
+            <Letter bgcolor="#FF605F">E</Letter>
+            <Letter bgcolor="#FFD52E">I</Letter>
+            <Letter bgcolor="#49DD83">O</Letter>
+            <Letter bgcolor="#AE99FF">U</Letter>
+            
+        </div>, document.querySelector('#container') )
     </script>
 
 
