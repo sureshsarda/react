@@ -27,8 +27,19 @@
 <body>
     <div id="container"></div>
     <script type="text/babel">
+
+        var HelloWorldComponent = React.createClass({
+            render: function() {
+                return (
+                    <p>Hello, {this.props.person}!</p>
+                );
+            }
+        });
         ReactDOM.render(
-        <h1>Hello, React!</h1>, document.querySelector('#container') )
+        <div>
+            <HelloWorldComponent person="Suresh"/>
+        </div>, 
+        document.querySelector('#container') )
     </script>
 
 
