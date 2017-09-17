@@ -26,6 +26,7 @@ npm run build
 ## Thanks
 - [Kirupa](https://www.kirupa.com) for awesome React tutorials!
 - [Cassidy Williams](https://github.com/cassidoo) Lot's of ideas are taken from [Weather](https://github.com/cassidoo/vveather) app (including this readme!)
+- [Bing](http://bing.com) For image APIs
 - [crossorigin.me](http://crossorigin.me)
 - [W3Schools.com](https://www.w3schools.com) for the styles sheets
 
