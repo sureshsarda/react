@@ -4,7 +4,7 @@ import axios from 'axios';
 class ImageDescription extends Component {
     render() {
         return (
-            <div className="imageDesc">
+            <div className="w3-display-bottomleft w3-container w3-padding-16 w3-black">
                 {this.props.imageDescription}
             </div>
         )
@@ -63,15 +63,16 @@ class ImageNavigation extends Component {
     render() {
 
         return (
-            <div className="navigationRoot">
-                <div className="button">
+            <div className="w3-content w3-display-container">
+                <div className="w3-button w3-transaparent w3-display-left">
                     <button onClick={this.next}>></button>
                 </div>
-                <div className="imageContainer">
+                <div className="mySlides">
                     <Image imageUrlBase={this.props.images[this.state.counter]['urlbase']}></Image>
-                    <ImageDescription imageDescription={this.props.images[this.state.counter]['copyright']} />
+                    <ImageDescription className="w3-display-bottomleft w3-container w3-padding-16 w3-black" 
+                        imageDescription={this.props.images[this.state.counter]['copyright']} />
                 </div>
-                <div className="button">
+                <div className="w3-button w3-transparent w3-display-right">
                     <button onClick={this.previous}>></button>
                 </div>
             </div>

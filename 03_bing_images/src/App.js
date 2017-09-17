@@ -5,7 +5,7 @@ import './App.css'
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="w3-center">
         <h1>Bing Image of the day</h1>
         <ImageNavigationContainer />
       </div>
