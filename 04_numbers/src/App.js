@@ -19,17 +19,17 @@ class App extends Component {
   }
   render() {
     var cards = []
-    for (var i = 0; i < 5; i++) {
-      var number = Math.floor(Math.random() * 1000);
+    for (var i = 0; i < 1; i++) {
+      var number = Math.floor(Math.random() * 100);
       cards.push(<NumberCard number={number} />)
     }
 
     return (
-      <div class="container">
-        <div>
-          <h1>Numbers and trivia</h1>
+      <div className="container">
+        <div className="header">
+          <h1>Numbers & Trivia</h1>
         </div>
-        <div className="card-columns" >
+        <div className="card" >
           {cards}
         </div>
       </div>

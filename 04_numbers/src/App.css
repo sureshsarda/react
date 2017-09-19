@@ -1,9 +1,63 @@
 .number {
     font-size: 96px;
-    font-family: monospace;
+    font-family: serif;
     text-align: center;
 }
 
 .description {
     text-align: center;
+}
+
+html, body, #root {
+    height: 100%;
+    width: 100%;
+    background-color: #2E2E4B;
+    display: flex;
+    align-items: center;
+    align-content: center;
+
+}
+.container {
+    
+    text-align: center;
+    margin: auto;
+}
+
+.header {
+    color: white;
+    border: 1px solid white;
+}
+
+.card {
+    background-color: white;    
+    color: #2E2E4B;
+    max-width: 400px;
+    min-height: 400px;
+    display: flex;
+    align-content: space-around;
+}
+
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    height: 100%;
+    
+}
+.card .number {
+    width: 100%;
+    font-weight: bold;
+    height: 50%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.card .description {
+    height: 25%;
+}
+
+.card .description :first-child {
+    border-bottom: 1px solid black;
 }

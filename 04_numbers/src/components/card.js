@@ -44,6 +44,9 @@ class NumberCard extends Component {
                     <div className="card-text description">
                         <p >{this.state.text}</p>
                     </div>
+                    <div className="card-text description">
+                        <p >{this.state.text}</p>
+                    </div>
                 </div>
             </div>
         )
