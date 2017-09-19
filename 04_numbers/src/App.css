@@ -32,7 +32,7 @@ html, body, #root {
     background-color: white;    
     color: #2E2E4B;
     max-width: 400px;
-    min-height: 400px;
+    min-height: 500px;
     display: flex;
     align-content: space-around;
 }
@@ -56,6 +56,9 @@ html, body, #root {
 
 .card .description {
     height: 25%;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid black;
 }
 
 .card .description :first-child {

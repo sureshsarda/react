@@ -42,10 +42,10 @@ class NumberCard extends Component {
                 <div className="card-body">
                     <div className="card-title number">{this.state.number}</div>
                     <div className="card-text description">
-                        <p >{this.state.text}</p>
+                        {this.state.text}
                     </div>
                     <div className="card-text description">
-                        <p >{this.state.text}</p>
+                        {this.state.text}
                     </div>
                 </div>
             </div>
