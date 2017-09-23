@@ -40,6 +40,19 @@ class TodoItem {
     mark_as_incomplete() {
         this.state = 'todo'
     }
+
+    state() {
+        return this.state
+    }
+
+    toggle() {
+        if (this.is_complete()) {
+            this.mark_as_incomplete()
+        }
+        else {
+            this.mark_as_complete()
+        }
+    }
 }
 
 export {Todo, TodoItem}
