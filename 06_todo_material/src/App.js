@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ToDoComponent from './components/todo'
+import NewTodo from './components/new_todo'
 import { TodoItem, Todo } from './models/todo'
 
 import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
@@ -23,12 +24,19 @@ class App extends Component {
     this.state = {
       todo: todo
     }
+
+    this.add_item = this.add_item.bind(this)
+  }
+
+  add_item(description) {
+    this.state.todo.add(new TodoItem(description))
+    this.forceUpdate()
+
   }
   render() {
     var style = {
       height: "100%",
-      width: "100%",
-      display: 'inline-block',
+      width: "100%"
     };
 
     if (this.state == null) {
@@ -36,11 +44,16 @@ class App extends Component {
     }
     else {
       return (
-        <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
-          <Paper style={style} zDepth={1}>
-            <ToDoComponent todo={this.state.todo} />
-          </Paper>
-        </MuiThemeProvider>
+        <div>
+          <MuiThemeProvider muiTheme={getMuiTheme(lightBaseTheme)}>
+            <Paper style={style} zDepth={1}>
+              <div>
+                <NewTodo add_callback={this.add_item}/>
+                <ToDoComponent todo={this.state.todo} />
+              </div>
+            </Paper>
+          </MuiThemeProvider>
+        </div>
       );
     }
   }
